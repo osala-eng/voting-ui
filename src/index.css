@@ -49,6 +49,7 @@ body {
 .btn:hover{
   background: green;
   border: 3px solid red;
+  border-radius: 30px;
 }
 .btn:active{
   background: green;
