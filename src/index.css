@@ -46,11 +46,13 @@ body {
   font-size: 30px;
   font-family: inherit;
 }
-.btn :hover{
+.btn:hover{
   background: green;
+  border: 3px solid red;
 }
-.btn :active{
+.btn:active{
   background: green;
+  
 }
 .chart-plot{
   padding-top: 30px;

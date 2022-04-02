@@ -9,6 +9,7 @@ const Balot = ({cands, vote}) => {
                  candidate={candidates.name}
                  vote = {vote}
                  idname = {candidates.id}
+                 totVotes = {candidates.votes}
                  />
              ))
          }   
