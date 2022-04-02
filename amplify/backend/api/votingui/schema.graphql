@@ -1,0 +1,22 @@
+# This "input" configures a global authorization rule to enable public access to
+# all models in this schema. Learn more about authorization rules here: https://docs.amplify.aws/cli/graphql/authorization-rules
+input AMPLIFY { globalAuthRule: AuthRule = { allow: public } } # FOR TESTING ONLY!
+
+type Candidate @model {
+  id: ID!
+  name: String!
+  votes: Int!
+}
+
+input CastVoteInput{
+  id: ID!
+}
+
+type Mutation{
+  openVote(input: CastVoteInput!): Candidate
+}
+
+type Subscription{
+  onCastVote: Candidate
+    @aws_subscribe(mutations: ["openVote"])
+}
